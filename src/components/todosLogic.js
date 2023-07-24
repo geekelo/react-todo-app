@@ -54,10 +54,24 @@ const TodosLogic = () => {
     })
   }
 
+  const setUpdate = (newTitle, titleId) => {
+    setTodos((prevState) => {
+      return prevState.map((each) => {
+        if (each.id === titleId) {
+          return {
+            ...each,
+            title: newTitle
+          }
+        }
+        return each;
+      })
+    })
+  }
+
   return (
     <div>
       <InputTodo addNewItem={addNewItem} />
-      <TodoList todoProps={todos} setTodo={setTodos} clickFunction={handleClick} delFunction={delTodo}/>
+      <TodoList todoProps={todos} setTodo={setTodos} clickFunction={handleClick} delFunction={delTodo} setUpdate={setUpdate} />
     </div>
   );
 };

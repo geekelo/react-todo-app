@@ -11,9 +11,11 @@ function App() {
 
 
   return (
-    <div>
-      <Header headingProp={ item } />
-      <TodosLogic itemProp={ item } />
+    <div className="wrapper">
+      <div className="todos">
+        <Header headingProp={ item } />
+        <TodosLogic itemProp={ item } />
+      </div>
     </div>
   );
 }

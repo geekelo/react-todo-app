@@ -1,11 +1,16 @@
 import TodoItem from "./todoItem";
 
-const TodoList = ({ todoProps, clickFunction, delFunction }) => {
+const TodoList = ({ todoProps, clickFunction, delFunction, setUpdate }) => {
 
   return(
     <ul>
       { 
-      todoProps.map((each) => (<TodoItem todoItem={each} triggerClickFunction={clickFunction}  triggerDelFunc={delFunction} />))
+      todoProps.map((each) => (<TodoItem
+        todoItem={each}
+        triggerClickFunction={clickFunction} 
+        triggerDelFunc={delFunction}
+        setUpdate={setUpdate}
+        />))
       }     
     </ul>
   )

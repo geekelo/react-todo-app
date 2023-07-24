@@ -24,12 +24,12 @@ const InputTodo = ({ addNewItem }) => {
   return (
     <div>
       <form  onClick={(e) => {handleSubmit(e)}}>
-        <input type="text" placeholder="Add todo..."
+        <input type="text" className="input-text" placeholder="Add todo..."
         onChange={ (e) => {updateTitle(e)} }
         />
-        <button>Submit</button>
+        <button className="input-submit">Submit</button>
       </form>
-      <span>
+      <span className="submit-warning">
         {message}
       </span>
     </div>
