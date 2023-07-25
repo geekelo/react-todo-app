@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { HiOutlineTrash, HiPencilAlt } from 'react-icons/hi';
+import PropTypes from 'prop-types';
 import styles from './styles/todoItem.module.css';
 
 const TodoItem = ({
@@ -9,7 +10,7 @@ const TodoItem = ({
   const [viewmode, setViewMode] = useState({ display: 'flex' });
   const [editmode, setEditMode] = useState({ display: 'none' });
 
-  const triggerEditable = function () {
+  const triggerEditable = () => {
     if (editing) {
       setViewMode({ display: 'flex' });
       setEditMode({ display: 'none' });
@@ -34,10 +35,10 @@ const TodoItem = ({
         />
         {todoItem.title}
         <div>
-          <button>
+          <button type="button">
             <HiPencilAlt size={22} onClick={triggerEditable} />
           </button>
-          <button>
+          <button type="button">
             <HiOutlineTrash size={22} onClick={() => { triggerDelFunc(todoItem.id); }} />
           </button>
         </div>
@@ -52,6 +53,17 @@ const TodoItem = ({
       />
     </li>
   );
+};
+
+TodoItem.propTypes = {
+  todoItem: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    completed: PropTypes.bool.isRequired,
+  }).isRequired,
+  triggerClickFunction: PropTypes.func.isRequired,
+  triggerDelFunc: PropTypes.func.isRequired,
+  setUpdate: PropTypes.func.isRequired,
 };
 
 export default TodoItem;

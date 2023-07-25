@@ -4,13 +4,13 @@ import TodoList from './todoList';
 import InputTodo from './todoInput';
 
 const TodosLogic = () => {
-  const [todos, setTodos] = useState(getStoredItems());
-
   function getStoredItems() {
     const storedItems = localStorage.getItem('todos');
     const temp = JSON.parse(storedItems);
     return temp || [];
   }
+
+  const [todos, setTodos] = useState(getStoredItems());
 
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
@@ -57,7 +57,13 @@ const TodosLogic = () => {
   return (
     <div>
       <InputTodo addNewItem={addNewItem} />
-      <TodoList todoProps={todos} setTodo={setTodos} clickFunction={handleClick} delFunction={delTodo} setUpdate={setUpdate} />
+      <TodoList
+        todoProps={todos}
+        setTodo={setTodos}
+        clickFunction={handleClick}
+        delFunction={delTodo}
+        setUpdate={setUpdate}
+      />
     </div>
   );
 };
