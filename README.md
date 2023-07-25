@@ -13,6 +13,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+    - [See Live Demo](#live-demo)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -67,7 +68,7 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-LIVE DEMO 
+### SEE LIVE DEMO <a name="live-demo"></a>
 
 🚀 Live Demo <a name="live-demo"></a>
 [Live Demo Link](https://geekelo.github.io/react-todo-app/)
