@@ -2,8 +2,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <br/>
-  <h3><b>Math magicians microverse project</b></h3>
+ <img src="https://dl.dropboxusercontent.com/s/110axfscx8e9q3q/Screenshot%202023-04-27%20024351.png" alt="logo" width=""  height="" />
 
 </div>
 
