@@ -36,7 +36,7 @@
 
 <img src="https://dl.dropbox.com/s/7rgvkgq7ghyazuv/Screenshot%202023-07-25%20175032.png">
 
-# 📖 [REACT TO-DO WEBAPP] <a name="about-project"></a>
+# 📖 REACT TO-DO WEBAPP <a name="about-project"></a>
 
 **REACT TO-DO WEBAPP - This is a simple Todo List web application built using React, a popular JavaScript library for building user interfaces. The app allows users to manage and keep track of their daily tasks and todos in an organized manner. Users can add, update, and delete tasks, as well as mark them as completed.**
 
@@ -80,8 +80,7 @@ LIVE DEMO
 
 - Open your Terminal
 - Navigate to the desired directory to which you want to clone the repository to
-- [Copy & Paste] git clone git@github.com:DianaBeki/math-magicians.git
-
+- [Copy & Paste] git clone https://github.com/geekelo/react-todo-app.git
 ### Prerequisites
 
 In order to run this project you need:
@@ -132,11 +131,11 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Note: This is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single-build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point, you're on your own.
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
@@ -153,7 +152,7 @@ To run tests, run the following command:
 
 ### Deployment
 
-- You can deploy it using: github pages
+- You can deploy it using: GitHub pages
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -200,7 +199,7 @@ If you like this project give it a ⭐️
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank microverse for this project
+I would like to thank Microverse for this project
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
