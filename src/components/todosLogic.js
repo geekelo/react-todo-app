@@ -4,7 +4,7 @@ import TodoList from './todoList';
 import InputTodo from './todoInput';
 
 const TodosLogic = () => {
-  const [ todos, setTodos ] = useState(getStoredItems())
+  const [todos, setTodos] = useState(getStoredItems());
 
   function getStoredItems() {
     const storedItems = localStorage.getItem('todos');
@@ -13,57 +13,46 @@ const TodosLogic = () => {
   }
 
   useEffect(() => {
-    localStorage.setItem('todos', JSON.stringify(todos))
-  }, [todos]
-
-  )
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
 
   const addNewItem = (newtitle) => {
-   const newTodo = {
+    const newTodo = {
       id: uuidv4(),
       title: newtitle,
       completed: false,
     };
-    
-    setTodos([...todos, newTodo])
-  }
+
+    setTodos([...todos, newTodo]);
+  };
 
   const handleClick = (id) => {
-    setTodos((prevState) => {
-      return prevState.map((each) => {
-        if (each.id === id) {
-          return {
-            ...each,
-            completed: !each.completed
-          }
-        }
-        return each;
-      })
-    })
-  }
+    setTodos((prevState) => prevState.map((each) => {
+      if (each.id === id) {
+        return {
+          ...each,
+          completed: !each.completed,
+        };
+      }
+      return each;
+    }));
+  };
 
   const delTodo = (id) => {
-    setTodos((prevState) => {
-      return prevState.filter((each) => {
-        return each.id !== id
-      }
-      )
-    })
-  }
+    setTodos((prevState) => prevState.filter((each) => each.id !== id));
+  };
 
   const setUpdate = (newTitle, titleId) => {
-    setTodos((prevState) => {
-      return prevState.map((each) => {
-        if (each.id === titleId) {
-          return {
-            ...each,
-            title: newTitle
-          }
-        }
-        return each;
-      })
-    })
-  }
+    setTodos((prevState) => prevState.map((each) => {
+      if (each.id === titleId) {
+        return {
+          ...each,
+          title: newTitle,
+        };
+      }
+      return each;
+    }));
+  };
 
   return (
     <div>

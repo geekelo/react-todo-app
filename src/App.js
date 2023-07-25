@@ -5,16 +5,15 @@ import TodosLogic from './components/todosLogic';
 
 function App() {
   const item = {
-    title: "To Dos",
-    description: "Items will be preserved in browser storage",
+    title: 'To Dos',
+    description: 'Items will be preserved in browser storage',
   };
-
 
   return (
     <div className="wrapper">
       <div className="todos">
-        <Header headingProp={ item } />
-        <TodosLogic itemProp={ item } />
+        <Header headingProp={item} />
+        <TodosLogic itemProp={item} />
       </div>
     </div>
   );

@@ -2,23 +2,24 @@ import React, { useState } from 'react';
 import { HiOutlineTrash, HiPencilAlt } from 'react-icons/hi';
 import styles from './styles/todoItem.module.css';
 
-const TodoItem = ({ todoItem, triggerClickFunction, triggerDelFunc, setUpdate }) => {
+const TodoItem = ({
+  todoItem, triggerClickFunction, triggerDelFunc, setUpdate,
+}) => {
   const [editing, setEditing] = useState(false);
   const [viewmode, setViewMode] = useState({ display: 'flex' });
   const [editmode, setEditMode] = useState({ display: 'none' });
-  
-  const triggerEditable = function(){
+
+  const triggerEditable = function () {
     if (editing) {
       setViewMode({ display: 'flex' });
       setEditMode({ display: 'none' });
       setEditing(false);
-    }
-    else {
+    } else {
       setViewMode({ display: 'none' });
       setEditMode({ display: 'flex' });
       setEditing(true);
     }
-  }
+  };
 
   return (
     <li className={styles.item}>
@@ -37,7 +38,7 @@ const TodoItem = ({ todoItem, triggerClickFunction, triggerDelFunc, setUpdate })
             <HiPencilAlt size={22} onClick={triggerEditable} />
           </button>
           <button>
-            <HiOutlineTrash size={22} onClick={() => {triggerDelFunc(todoItem.id)}} />
+            <HiOutlineTrash size={22} onClick={() => { triggerDelFunc(todoItem.id); }} />
           </button>
         </div>
       </div>
@@ -46,9 +47,9 @@ const TodoItem = ({ todoItem, triggerClickFunction, triggerDelFunc, setUpdate })
         value={todoItem.title}
         className={styles.textInput}
         style={editmode}
-        onChange={(e) => {setUpdate(e.target.value, todoItem.id)}}
-        onKeyDown={(e)=> {if (e.key === 'Enter'){triggerEditable()}}}
-        />
+        onChange={(e) => { setUpdate(e.target.value, todoItem.id); }}
+        onKeyDown={(e) => { if (e.key === 'Enter') { triggerEditable(); } }}
+      />
     </li>
   );
 };
